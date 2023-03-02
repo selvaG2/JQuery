@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        .cycleimg {
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        .carimg {
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        .bikeimg {
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        #car1 {
+            float: left;
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        #car2 {
+            float: right;
+            width: 150px;
+            height: 150px;
+            position: relative;
+        }
+
+        #car3 {
+            display: none; 
+            width: 550px;
+            height: 150px;
+            position: relative;
+            margin-left: 200px;
+
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("#ani1").animate({ left: '+=500px' });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("#ani2").animate({
+                    left: '150px',
+                    height: '150px',
+                    width: '100px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("#ani3").animate({
+                    height: 'toggle',
+                    width: 'toggle'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#button2").click(function () {
+                $("#car1").animate({
+                    left: '500px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#button2").click(function () {
+                $("#car2").animate({
+                    right: '500px'
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#button2").click(function () {
+                $("#car1").hide(),
+                $("#car2").hide(),
+                $("#car3").show()
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h2><b>ANIMATION</b></h2>
+    <hr>
+
+    <h4>Cycle animation</h4>
+    <div><img src="./assets-jq/bicycle-5595582-4684771.webp" class="cycleimg" id="ani1">
+    </div>
+
+    <h4>Car animation</h4>
+    <div><img src="./assets-jq/car-3655127-3061893 (1).webp" class="carimg" id="ani2"></div>
+
+    <h4>Bike animation</h4>
+    <div><img src="./assets-jq/motorcycle-4810759-4003179 (1).png" class="bikeimg" id="ani3"></div>
+
+    <button id="button1">Start animation</button>
+
+    <hr>
+    <div class="accident">
+        <h3>Car crash animation</h3>
+
+        <img src="./assets-jq/car-3655127-3061893 (1).webp" id="car1">
+        <img src="./assets-jq/car-3655127-3061893.webp " id="car2">
+        <img src="./assets-jq/car-accident-comic-style-vector-illustration-two-cars-hit-head-flat-design-crash-banner-82748663-removebg-preview.png"
+            id="car3">
+
+    </div>
+    <button id="button2">Crash</button>
+
+</body>
+
+</html>
