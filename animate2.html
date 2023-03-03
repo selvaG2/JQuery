@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body{
+            background: violet;
+            
+        }
+        p{
+            padding-left: 150px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#bn1").click(function () {
+                $("body").css({ background: 'white' });
+            });
+        });
+
+        $(document).ready(function () {
+               $(".div1").hover(function(){
+                    $(this).animate({"zoom":1.5},1000),
+                    $(this).css({color: 'violet'})
+               });
+               
+            });
+    </script>
+    
+</head>
+<body>
+    
+    <button id="bn1">Clck to change the background</button>
+    
+    
+    <div class="div1">
+        <img src="./assets-jq/login-3025715-2526913.webp" alt="">
+        <p><b>ON THE WAY...!</b></p>
+    </div>
+   
+</body>
+</html>
