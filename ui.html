@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        .phone1 {
+            width: 280px;
+            height: 300px;
+            float: left;
+        }
+
+        .phone2 {
+            width: 280px;
+            height: 300px;
+            float: left;
+        }
+
+        .lap1 {
+            width: 280px;
+            height: 100px;
+            float: left;
+        }
+
+        .lap2 {
+            width: 280px;
+            height: 100px;
+            float: left;
+        }
+
+
+    </style>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
+        $(function () {
+                $("#btn-1").click(function () {
+                    var $accordionContent = $("<div class='accordion-content'>");
+                    var $image = $("<img src='./assets-jq/login-3025715-2526913.webp' alt='New Image'>");
+                    $accordionContent.append($image);
+                    $(".accordion").append($accordionContent);
+                    $(".accordion").accordion("refresh");
+                });
+                $(".accordion").accordion();
+            });
+
+        
+    </script>
+</head>
+
+<body>
+
+    <div id="accordion" >
+        <h3>IPhone`s Section</h3>
+        <div class="accordion-content">
+            <img src="./assets-jq/iphone-13-pink-select-2021.png" class="phone1">
+            
+            <img src="./assets-jq/iphone-13-product-red-select-2021.png" class="phone2">
+           
+
+
+        </div>
+        <h3> Laptop Section </h3>
+        <div id="">
+            <img src="./assets-jq/macbook-cleanmymac-the-best-mac-cleanup-app-for-macos-get-32.png" class="lap1">
+            
+            <img src="./assets-jq/macbook-official-apple-support-34.png" class="lap2">
+            
+
+        </div>
+
+
+
+    </div>
+
+    <button id="btn1">Add phone</button>
+</body>
+
+</html>
