@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        //menu script
+        $(function () {
+            $("#menu").menu();
+        });
+        //tab script
+        $(function () {
+            $("#tabs").tabs({
+                collapsible: true
+            });
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 150px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/assets-jq/protection-3d-icon-illustration-for-your-website-user-interface-and-presentation-3d-render-illustration-free-png.webp"
+                    alt="" width="50" height="44" class="d-inline-block align-text-top">
+                Selva
+            </a>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+        </div>
+
+    </nav>
+    <!-- Vertical menu goes -->
+    <ul id="menu">
+        <li>
+            <div>Menu</div>
+        </li>
+        <li>
+            <div>Books</div>
+        </li>
+        <li>
+            <div>Clothing</div>
+        </li>
+        <li>
+            <div>Electronics</div>
+            <ul>
+                <li>
+                    <div>Home Entertainment</div>
+                </li>
+                <li>
+                    <div>Car Hifi</div>
+                </li>
+                <li>
+                    <div>Utilities</div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>Movies</div>
+        </li>
+        <li>
+            <div>Music</div>
+            <ul>
+                <li>
+                    <div>Rock</div>
+                    <ul>
+                        <li>
+                            <div>Alternative</div>
+                        </li>
+                        <li>
+                            <div>Classic</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Jazz</div>
+                    <ul>
+                        <li>
+                            <div>Freejazz</div>
+                        </li>
+                        <li>
+                            <div>Big Band</div>
+                        </li>
+                        <li>
+                            <div>Modern</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Pop</div>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    <!-- Tabs content goes here -->
+    <div id="tabs">
+        <ul>
+            <li><a href="#cartoon">Cartoon image</a></li>
+            <li><a href="#bike">Bike image</a></li>
+            <li><a href="#car">Car</a></li>
+        </ul>
+        <div id="cartoon">
+            <p><strong>Cartoon image</strong></p>
+            <img src="/assets-t2/1.avif" style="width: 250px;height: 200px;" >
+            <img src="/assets-t2/2.png" style="width: 250px;height: 200px;">
+            <img src="/assets-t2/3.png" style="width: 250px;height: 200px;"> <button>Download</button>
+        </div>
+        <div id="bike">
+            <p><strong>Bike images</strong></p>
+            <img src="/assets-t2/4.webp" style="width: 250px;height: 200px;">
+            <img src="/assets-t2/5.png" style="width: 250px;height: 200px;">
+            <img src="/assets-t2/6.png" style="width: 300px;height: 200px;"> <button>Download</button>
+        </div>
+        <div id="car">
+            <p><strong>Car images</strong></p>
+            <img src="/assets-t2/7.png" style="width: 250px;height: 200px;">
+            <img src="/assets-t2/8.png" style="width: 250px;height: 200px;">
+            <img src="/assets-t2/9.png" style="width: 300px;height: 200px;"> <button>Download</button>
+        </div>
+    </div>
+</body>
+
+</html>
