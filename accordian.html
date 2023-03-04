@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Accordion and Autocomplete Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <style>
+        .ui-accordion-content {
+            padding: 10px;
+        }
+
+        .product-search {
+            margin: 20px 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="accordion">
+        <h3>Mobile Phones</h3>
+        <div>
+            <div id="mobile-images">
+                <img src="./assets-jq/iphone-13-pink-select-2021.png" style="width: 100px;height: 100px;">
+                <img src="./assets-jq/iphone-13-product-red-select-2021.png" style="width: 100px;height: 100px;">
+            </div>
+        </div>
+        <h3>Laptops</h3>
+        <div>
+            <div id="laptop-images">
+                <img src="./assets-jq/macbook-cleanmymac-the-best-mac-cleanup-app-for-macos-get-32.png" style="width: 150px;height: 50px;">
+                <img src="./assets-jq/macbook-official-apple-support-34.png" style="width: 150px;height: 50px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="product-search">
+        <label for="product-input">Search Products: </label>
+        <input type="text" id="product-input">
+    </div>
+
+    
+    <button id="add-img-last">Add Phones</button>
+
+    <button id="add-img-first">Add laptops</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            // Initialize accordion
+            $("#accordion").accordion();
+
+            // Add more mobile phone images
+            $("#add-img-last").click(function () {
+                $("#mobile-images").append('<img src="./assets-jq/SM-M536_Galaxy-M53-5G_Blue_FrontBack_RGB-min.png" style="width: 100px;height: 100px;">');
+                $("#mobile-images").append('<img src="./assets-jq/uk-galaxy-m53-5g-sm-m536-sm-m536bzggeub-532259072.avif" style="width: 100px;height: 100px;">');
+            });
+
+            // Add more laptop images
+            $("#add-img-first").click(function () {
+                $("#laptop-images").prepend('<img src="./assets-jq/pngimg.com - macbook_PNG9.jpg" style="width: 100px;height: 100px;">');
+                $("#laptop-images").prepend('<img src="./assets-jq/macbook_PNG35.png" style="width: 100px;height: 100px;">');
+            });
+
+            // Initialize autocomplete
+            var products = [
+                "Mobile Phone",
+                "Laptop",
+                "Tablet",
+                "Smartwatch",
+                "Headphones"
+            ];
+            $("#product-input").autocomplete({
+                source: products
+            });
+        });
+    </script>
+</body>
+
+</html>
